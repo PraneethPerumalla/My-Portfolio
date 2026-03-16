@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Praneeth Perumalla — Portfolio</title>
+  <meta name="description" content="Personal portfolio of Perumalla Praneeth — B.Tech CSE student, developer, and designer." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ============= NAVIGATION ============= -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="nav-logo">P<span>.</span>PRANEETH</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-sun icon-sun"></i>
+        <i class="fa-solid fa-moon icon-moon"></i>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============= HERO ============= -->
+  <section id="hero">
+    <img src="images/hero-bg.png" alt="" class="hero-bg-image" id="heroBg" />
+    <div class="container">
+      <div class="hero-content reveal reveal-up">
+        <p class="hero-eyebrow"><span class="line"></span> Personal Portfolio</p>
+        <h1 class="hero-title">PRANEETH<span class="accent-dot"></span></h1>
+        <p class="hero-subtitle">B.Tech Computer Science &amp; Engineering student passionate about development, design, and problem-solving.</p>
+        <div class="hero-cta-row">
+          <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-eye"></i> View Work</a>
+          <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> Get in Touch</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ============= ABOUT ============= -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid reveal">
+        <div class="about-image-wrap reveal reveal-left">
+          <img src="images/profile.png" alt="Praneeth Perumalla" />
+          <div class="about-image-accent"></div>
+        </div>
+        <div class="about-text reveal reveal-right">
+          <span class="section-label"><span class="dot"></span> About Me</span>
+          <h2 class="section-title">Perumalla Praneeth</h2>
+          <p><span class="highlight">Computer Science student</span> at Lovely Professional University, passionate about building clean, functional, and visually engaging digital experiences. I love turning complex problems into simple, elegant solutions.</p>
+          <p>With a strong foundation in C, C++, HTML, CSS, and cloud technologies like Docker &amp; AWS, I'm always eager to learn and adapt. My projects span from algorithm visualization platforms to UI/UX design for real-world applications.</p>
+          <div class="about-stats">
+            <div class="stat-box">
+              <div class="number">4+</div>
+              <div class="label">Projects</div>
+            </div>
+            <div class="stat-box">
+              <div class="number">3+</div>
+              <div class="label">Certifications</div>
+            </div>
+            <div class="stat-box">
+              <div class="number">6.9</div>
+              <div class="label">CGPA</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= SKILLS / CONCEPT ============= -->
+  <section id="skills">
+    <div class="container">
+      <div class="skills-header reveal">
+        <span class="section-label"><span class="dot"></span> Concept</span>
+        <h2 class="section-title">Skills &amp; Expertise</h2>
+        <p>A blend of technical prowess and soft skills honed through academic projects, training programs, and hackathons.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal reveal-zoom" style="--delay: 100ms">
+          <div class="icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Programming</h3>
+          <p>Proficient in core programming languages with strong algorithm and data structure fundamentals.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">DSA</span>
+            <span class="skill-tag">Algorithm Design</span>
+          </div>
+        </div>
+        <div class="skill-card reveal reveal-zoom" style="--delay: 200ms">
+          <div class="icon"><i class="fa-solid fa-palette"></i></div>
+          <h3>Web &amp; Design</h3>
+          <p>Building responsive, accessible web interfaces and crafting intuitive UI/UX experiences.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Figma</span>
+          </div>
+        </div>
+        <div class="skill-card reveal reveal-zoom" style="--delay: 300ms">
+          <div class="icon"><i class="fa-solid fa-cloud"></i></div>
+          <h3>DevOps &amp; Cloud</h3>
+          <p>Hands-on experience with containerization and cloud infrastructure platforms.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">AWS</span>
+          </div>
+        </div>
+        <div class="skill-card reveal reveal-zoom" style="--delay: 400ms">
+          <div class="icon"><i class="fa-solid fa-lightbulb"></i></div>
+          <h3>Soft Skills</h3>
+          <p>Adaptable team player with strong analytical thinking and rapid learning ability.</p>
+          <div class="skill-tags">
+            <span class="skill-tag">Problem-Solving</span>
+            <span class="skill-tag">Adaptability</span>
+            <span class="skill-tag">Quick Learner</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= PROJECTS ============= -->
+  <section id="projects">
+    <div class="container">
+      <span class="section-label reveal"><span class="dot"></span> The Work</span>
+      <h2 class="section-title reveal">Featured Projects</h2>
+      
+      <div class="projects-scroll-wrapper reveal">
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card reveal reveal-up" style="--delay: 100ms">
+            <div class="project-image">
+              <img src="images/project-cpu.png" alt="CPU Scheduling Visualization" />
+              <div class="overlay">
+                <span style="color:#fff;font-family:var(--ff-heading);font-weight:600;">View Project →</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-date">October 2025</p>
+              <h3>CPU Scheduling &amp; Algorithm Visualization</h3>
+              <p>An interactive web platform to simulate CPU scheduling algorithms — FCFS, SJF, Round Robin, and Priority Scheduling — with real-time comparisons.</p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Algorithm Design</span>
+              </div>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="project-card reveal reveal-up" style="--delay: 200ms">
+            <div class="project-image">
+              <img src="images/project-food.png" alt="Food Delivery UI Design" />
+              <div class="overlay">
+                <span style="color:#fff;font-family:var(--ff-heading);font-weight:600;">View Project →</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-date">September 2025</p>
+              <h3>Online Food Delivery Website Design</h3>
+              <p>Designed a user-friendly UI/UX for an online food delivery platform in Figma, featuring smooth navigation, intuitive ordering flow, and refined usability.</p>
+              <div class="project-tech">
+                <span>Figma</span>
+                <span>UI/UX</span>
+                <span>Prototyping</span>
+                <span>Wireframing</span>
+              </div>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div class="project-card reveal reveal-up" style="--delay: 300ms">
+            <div class="project-image">
+              <img src="images/project-attendance.png" alt="Smart Attendance System" />
+              <div class="overlay">
+                <span style="color:#fff;font-family:var(--ff-heading);font-weight:600;">View Project →</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-date">July 2025</p>
+              <h3>Smart Attendance System</h3>
+              <p>A C++ and OpenCV-powered attendance system using facial recognition. Features automated logging, secure database integration, and a real-time monitoring dashboard.</p>
+              <div class="project-tech">
+                <span>C++</span>
+                <span>OpenCV</span>
+                <span>Python</span>
+                <span>MySQL</span>
+              </div>
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div class="project-card reveal reveal-up" style="--delay: 400ms">
+            <div class="project-image">
+              <img src="images/project-cpu.png" alt="Student Performance Dashboard" />
+              <div class="overlay">
+                <span style="color:#fff;font-family:var(--ff-heading);font-weight:600;">View Project →</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-date">May 2025</p>
+              <h3>Student Performance Dashboard</h3>
+              <p>A data-driven web app to track student academic progress. Visualizes grades, attendance, and performance metrics using responsive charts and analytics.</p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Chart.js</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ============= EXPERIENCE ============= -->
+  <section id="experience">
+    <div class="container">
+      <span class="section-label reveal"><span class="dot"></span> Experience &amp; Education</span>
+      <h2 class="section-title reveal">My Journey</h2>
+      <div class="experience-timeline">
+        <div class="exp-item reveal reveal-up" style="--delay: 100ms">
+          <div class="exp-dot"></div>
+          <p class="exp-date">Aug 2023 — Present</p>
+          <h3>B.Tech — Computer Science &amp; Engineering</h3>
+          <p class="exp-org">Lovely Professional University, Phagwara, Punjab</p>
+          <p>Currently pursuing bachelor's degree with a CGPA of 6.9. Active participant in hackathons and technical events.</p>
+        </div>
+        <div class="exp-item reveal reveal-up" style="--delay: 200ms">
+          <div class="exp-dot"></div>
+          <p class="exp-date">Jun 2025</p>
+          <h3>Think Design Prototype — Summer Training</h3>
+          <p class="exp-org">Design Thinking &amp; Figma Program</p>
+          <p>Intensive training on problem-solving, algorithmic optimization, advanced data structures, and competitive programming performance improvement.</p>
+        </div>
+        <div class="exp-item reveal reveal-up" style="--delay: 300ms">
+          <div class="exp-dot"></div>
+          <p class="exp-date">Mar 2024</p>
+          <h3>LPU Innovation Hackathon</h3>
+          <p class="exp-org">Organized by Team 7 in collaboration with Block se Block</p>
+          <p>Participated in a university-wide hackathon focused on innovation and collaborative problem-solving.</p>
+        </div>
+        <div class="exp-item reveal reveal-up" style="--delay: 400ms">
+          <div class="exp-dot"></div>
+          <p class="exp-date">Mar 2024</p>
+          <h3>Ethical Hacking Certification</h3>
+          <p class="exp-org">30+ Hours Live Training — Code Sprint</p>
+          <p>Completed comprehensive live training in ethical hacking and cybersecurity fundamentals.</p>
+        </div>
+        <div class="exp-item reveal reveal-up" style="--delay: 500ms">
+          <div class="exp-dot"></div>
+          <p class="exp-date">Completed</p>
+          <h3>Google Online Course — Coursera</h3>
+          <p class="exp-org">Google &amp; Coursera</p>
+          <p>Non-credit course authorized by Google, covering foundational technology concepts.</p>
+        </div>
+        <div class="exp-item reveal reveal-up" style="--delay: 600ms">
+          <div class="exp-dot"></div>
+          <p class="exp-date">Mar 2023</p>
+          <h3>Intermediate — CGPA 8.6</h3>
+          <p class="exp-org">Aditya Junior College, Palakollu, Andhra Pradesh</p>
+          <p>Completed higher secondary education with distinction.</p>
+        </div>
+        <div class="exp-item reveal reveal-up" style="--delay: 700ms">
+          <div class="exp-dot"></div>
+          <p class="exp-date">Mar 2021</p>
+          <h3>Matriculation — CGPA 9.7</h3>
+          <p class="exp-org">Narayana School, Palakollu, Andhra Pradesh</p>
+          <p>Graduated with outstanding academic performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- ============= CONTACT ============= -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-grid reveal reveal-up">
+        <div class="contact-info reveal reveal-left">
+          <span class="section-label" style="color:rgba(255,255,255,.4);"><span class="dot"></span> Contact</span>
+          <h2 class="section-title reveal reveal-up" style="--delay: 100ms">Let's Work<br/>Together<span class="accent">.</span></h2>
+          <p class="reveal reveal-up" style="--delay: 200ms">Have a project in mind or just want to say hello? Feel free to reach out — I'd love to hear from you!</p>
+          <div class="contact-links">
+            <div class="contact-link-item reveal reveal-up" style="--delay: 300ms">
+              <div class="cl-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="cl-text">
+                <div class="cl-label">Email</div>
+                <div class="cl-value"><a href="mailto:praneethperumalla@gmail.com">praneethperumalla@gmail.com</a></div>
+              </div>
+            </div>
+            <div class="contact-link-item reveal reveal-up" style="--delay: 400ms">
+              <div class="cl-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="cl-text">
+                <div class="cl-label">Phone</div>
+                <div class="cl-value"><a href="tel:+919182420993">+91-9182420993</a></div>
+              </div>
+            </div>
+            <div class="contact-link-item reveal reveal-up" style="--delay: 500ms">
+              <div class="cl-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+              <div class="cl-text">
+                <div class="cl-label">LinkedIn</div>
+                <div class="cl-value"><a href="https://www.linkedin.com/in/perumalla-praneeth-524757294/" target="_blank">Perumalla Praneeth</a></div>
+              </div>
+            </div>
+            <div class="contact-link-item reveal reveal-up" style="--delay: 600ms">
+              <div class="cl-icon"><i class="fa-brands fa-github"></i></div>
+              <div class="cl-text">
+                <div class="cl-label">GitHub</div>
+                <div class="cl-value"><a href="https://github.com/PraneethPerumalla" target="_blank">PraneethPerumalla</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal reveal-right">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group reveal reveal-up" style="--delay: 100ms">
+              <input type="text" id="name" name="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-group reveal reveal-up" style="--delay: 200ms">
+              <input type="email" id="email" name="email" placeholder="Your Email" required />
+            </div>
+            <div class="form-group reveal reveal-up" style="--delay: 300ms">
+              <input type="text" id="subject" name="title" placeholder="Subject" />
+            </div>
+            <div class="form-group reveal reveal-up" style="--delay: 400ms">
+              <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            </div>
+            <button class="btn-submit reveal reveal-up" style="--delay: 500ms" type="submit"><i class="fa-solid fa-paper-plane"></i>&nbsp; Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= FOOTER ============= -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Praneeth Perumalla. All Rights Reserved.</p>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/perumalla-praneeth-524757294/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/PraneethPerumalla" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="mailto:praneethperumalla@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      // Initialize with your Public Key
+      emailjs.init("ITZgOxtBfrQ-w_cb9");
+    })();
+  </script>
+  
+  <script src="script.js?v=2"></script>
+</body>
+</html>
