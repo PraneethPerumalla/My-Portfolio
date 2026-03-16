@@ -16,6 +16,35 @@ document.addEventListener('DOMContentLoaded', () => {
     root.setAttribute('data-theme', 'dark');
   }
 
+  /* ---------- Custom Cursor ---------- */
+  const cursor = document.getElementById('customCursor');
+  const cursorFollower = document.getElementById('customCursorFollower');
+
+  document.addEventListener('mousemove', (e) => {
+    // Update main cursor position immediately
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+
+    // Update follower with a slight delay
+    setTimeout(() => {
+      cursorFollower.style.left = e.clientX + 'px';
+      cursorFollower.style.top = e.clientY + 'px';
+    }, 50);
+  });
+
+  // Adding hover effect class on interactive elements
+  const interactiveElements = document.querySelectorAll('a, button, .theme-toggle');
+  interactiveElements.forEach((el) => {
+    el.addEventListener('mouseenter', () => {
+      cursor.classList.add('hover');
+      cursorFollower.classList.add('hover');
+    });
+    el.addEventListener('mouseleave', () => {
+      cursor.classList.remove('hover');
+      cursorFollower.classList.remove('hover');
+    });
+  });
+
   themeToggle.addEventListener('click', () => {
     const current = root.getAttribute('data-theme');
     const next = current === 'dark' ? 'light' : 'dark';
@@ -122,7 +151,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const templateID = 'template_ggcp0ma';
     const publicKey = 'ITZgOxtBfrQ-w_cb9';
 
-    emailjs.sendForm(serviceID, templateID, form, publicKey)
+    // Construct the template parameters exactly matching your EmailJS Template
+    const templateParams = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      title: document.getElementById('subject').value,
+      message: document.getElementById('message').value
+    };
+
+    emailjs.send(serviceID, templateID, templateParams, publicKey)
       .then(() => {
         alert("Message sent successfully!");
         btn.innerHTML = '<i class="fa-solid fa-check"></i>&nbsp; Message Sent!';
