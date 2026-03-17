@@ -28,6 +28,7 @@
         <li><a href="#certificates">Certificates</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li class="nav-cv"><a href="cv/Praneeth.CV2.pdf" download class="btn-cv-nav"><i class="fa-solid fa-download"></i> CV</a></li>
       </ul>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
         <i class="fa-solid fa-sun icon-sun"></i>
@@ -73,25 +74,25 @@
           <img src="images/profile.png" alt="Praneeth Perumalla" />
           <div class="about-image-accent"></div>
         </div>
-        <div class="about-text reveal reveal-right">
-          <span class="section-label"><span class="dot"></span> About Me</span>
-          <h2 class="section-title">Perumalla Praneeth</h2>
-          <p><span class="highlight">Computer Science student</span> at Lovely Professional University, passionate about
+        <div class="about-text reveal reveal-right" style="--delay: 200ms">
+          <span class="section-label reveal reveal-fade"><span class="dot"></span> About Me</span>
+          <h2 class="section-title reveal reveal-up" style="--delay: 100ms">Perumalla Praneeth</h2>
+          <p class="reveal reveal-up" style="--delay: 200ms"><span class="highlight">Computer Science student</span> at Lovely Professional University, passionate about
             building clean, functional, and visually engaging digital experiences. I love turning complex problems into
             simple, elegant solutions.</p>
-          <p>With a strong foundation in C, C++, HTML, CSS, and cloud technologies like Docker &amp; AWS, I'm always
+          <p class="reveal reveal-up" style="--delay: 300ms">With a strong foundation in C, C++, HTML, CSS, and cloud technologies like Docker &amp; AWS, I'm always
             eager to learn and adapt. My projects span from algorithm visualization platforms to UI/UX design for
             real-world applications.</p>
-          <div class="about-stats">
-            <div class="stat-box">
+          <div class="about-stats reveal reveal-up" style="--delay: 400ms">
+            <div class="stat-box reveal reveal-scale-up" style="--delay: 500ms">
               <div class="number">4+</div>
               <div class="label">Projects</div>
             </div>
-            <div class="stat-box">
+            <div class="stat-box reveal reveal-scale-up" style="--delay: 600ms">
               <div class="number">3+</div>
               <div class="label">Certifications</div>
             </div>
-            <div class="stat-box">
+            <div class="stat-box reveal reveal-scale-up" style="--delay: 700ms">
               <div class="number">6.9</div>
               <div class="label">CGPA</div>
             </div>
@@ -136,10 +137,10 @@
   <!-- ============= SKILLS / CONCEPT ============= -->
   <section id="skills">
     <div class="container">
-      <div class="skills-header reveal">
-        <span class="section-label"><span class="dot"></span> Concept</span>
-        <h2 class="section-title">Skills &amp; Expertise</h2>
-        <p>A blend of technical prowess and soft skills honed through academic projects, training programs, and
+      <div class="skills-header reveal reveal-up">
+        <span class="section-label reveal reveal-fade"><span class="dot"></span> Concept</span>
+        <h2 class="section-title reveal reveal-up" style="--delay: 100ms">Skills &amp; Expertise</h2>
+        <p class="reveal reveal-up" style="--delay: 200ms">A blend of technical prowess and soft skills honed through academic projects, training programs, and
           hackathons.</p>
       </div>
       <div class="skills-grid">
@@ -277,6 +278,14 @@
                 <span>Prototyping</span>
                 <span>Wireframing</span>
               </div>
+              <div class="project-links" style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap;">
+                <a href="https://github.com/PraneethPerumalla/Figma---Online-Food-Delivery-App" target="_blank"
+                  class="btn btn-outline" style="padding: 10px 20px; font-size: var(--fs-xs); margin-bottom: 0;"><i
+                    class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://www.figma.com/proto/wRxcfJ9OsJw8wdy2C22vFd/food-application--Copy---Copy-?node-id=828-1022&starting-point-node-id=668%3A1744&t=NKxa7WUR20IZBOKW-1&show-proto-sidebar=1" target="_blank"
+                  class="btn btn-primary" style="padding: 10px 20px; font-size: var(--fs-xs); margin-bottom: 0;"><i
+                    class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              </div>
             </div>
           </div>
         </div>
@@ -288,8 +297,8 @@
   <!-- ============= CERTIFICATES ============= -->
   <section id="certificates">
     <div class="container">
-      <span class="section-label reveal"><span class="dot"></span> Achievements</span>
-      <h2 class="section-title reveal">Certifications</h2>
+      <span class="section-label reveal reveal-fade"><span class="dot"></span> Achievements</span>
+      <h2 class="section-title reveal reveal-up" style="--delay: 100ms">Certifications</h2>
 
       <div class="projects-grid" style="flex-wrap: wrap; justify-content: center; overflow-x: visible;">
         <!-- Certificate 1: Google Networking -->
@@ -345,8 +354,8 @@
   <!-- ============= EXPERIENCE ============= -->
   <section id="experience">
     <div class="container">
-      <span class="section-label reveal"><span class="dot"></span> Career Path</span>
-      <h2 class="section-title reveal">Experience</h2>
+      <span class="section-label reveal reveal-fade"><span class="dot"></span> Career Path</span>
+      <h2 class="section-title reveal reveal-up" style="--delay: 100ms">Experience</h2>
       <div class="experience-timeline">
         <div class="exp-item reveal reveal-up" style="--delay: 100ms">
           <div class="exp-dot"></div>
@@ -424,8 +433,10 @@
             <div class="form-group reveal reveal-up" style="--delay: 400ms">
               <textarea id="message" name="message" placeholder="Your Message" required></textarea>
             </div>
-            <button class="btn-submit reveal reveal-up" style="--delay: 500ms" type="submit"><i
-                class="fa-solid fa-paper-plane"></i>&nbsp; Send Message</button>
+            <div class="form-actions reveal reveal-up" style="--delay: 500ms">
+              <button class="btn-submit" type="submit"><i class="fa-solid fa-paper-plane"></i>&nbsp; Send Message</button>
+              <a href="cv/Praneeth.CV2.pdf" download class="btn btn-outline cv-btn-contact"><i class="fa-solid fa-download"></i> Download CV</a>
+            </div>
           </form>
         </div>
       </div>
