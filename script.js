@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const templateParams = {
       name: document.getElementById('name').value,
       email: document.getElementById('email').value,
-      title: document.getElementById('subject').value,
+      title: "New Message from Portfolio", // Subject field was missing in HTML
       message: document.getElementById('message').value
     };
 
