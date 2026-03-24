@@ -1,62 +1,55 @@
 /* ===========================
    PORTFOLIO – Interactions
+   (Yaswanth-Style Dark Theme)
    =========================== */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ---------- Theme Toggle ---------- */
-  const themeToggle = document.getElementById('themeToggle');
-  const root = document.documentElement;
-
-  // Check for saved preference or system preference
-  const savedTheme = localStorage.getItem('portfolio-theme');
-  if (savedTheme) {
-    root.setAttribute('data-theme', savedTheme);
-  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    root.setAttribute('data-theme', 'dark');
-  }
-
   /* ---------- Custom Cursor ---------- */
-  const cursor = document.getElementById('customCursor');
-  const cursorFollower = document.getElementById('customCursorFollower');
+  const cursorDot = document.getElementById('cursorDot');
+  const cursorRing = document.getElementById('cursorRing');
+  let mouseX = 0, mouseY = 0;
+  let ringX = 0, ringY = 0;
 
   document.addEventListener('mousemove', (e) => {
-    // Update main cursor position immediately
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-
-    // Update follower with a slight delay
-    setTimeout(() => {
-      cursorFollower.style.left = e.clientX + 'px';
-      cursorFollower.style.top = e.clientY + 'px';
-    }, 50);
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    cursorDot.style.left = mouseX + 'px';
+    cursorDot.style.top = mouseY + 'px';
   });
 
-  // Adding hover effect class on interactive elements
-  const interactiveElements = document.querySelectorAll('a, button, .theme-toggle');
-  interactiveElements.forEach((el) => {
+  // Smooth ring follow with lerp
+  function animateRing() {
+    ringX += (mouseX - ringX) * 0.15;
+    ringY += (mouseY - ringY) * 0.15;
+    cursorRing.style.left = ringX + 'px';
+    cursorRing.style.top = ringY + 'px';
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+
+  // Hover detection on interactive elements
+  const hoverTargets = document.querySelectorAll('a, button, input, textarea, .btn, .btn-hire, .btn-live, .btn-source, .btn-cert, .value-card, .skill-category-card, .cert-card, .browser-mockup');
+  hoverTargets.forEach(el => {
     el.addEventListener('mouseenter', () => {
-      cursor.classList.add('hover');
-      cursorFollower.classList.add('hover');
+      cursorDot.classList.add('hovering');
+      cursorRing.classList.add('hovering');
     });
     el.addEventListener('mouseleave', () => {
-      cursor.classList.remove('hover');
-      cursorFollower.classList.remove('hover');
+      cursorDot.classList.remove('hovering');
+      cursorRing.classList.remove('hovering');
     });
   });
 
-  themeToggle.addEventListener('click', () => {
-    const current = root.getAttribute('data-theme');
-    const next = current === 'dark' ? 'light' : 'dark';
-    if (next === 'light') {
-      root.removeAttribute('data-theme');
-    } else {
-      root.setAttribute('data-theme', 'dark');
-    }
-    localStorage.setItem('portfolio-theme', next);
+  // Click feedback
+  document.addEventListener('mousedown', () => {
+    cursorDot.classList.add('clicking');
+    cursorRing.classList.add('clicking');
   });
-
-  /* ---------- Mobile Nav Toggle ---------- */
+  document.addEventListener('mouseup', () => {
+    cursorDot.classList.remove('clicking');
+    cursorRing.classList.remove('clicking');
+  });
   const hamburger = document.getElementById('hamburger');
   const navLinks  = document.getElementById('navLinks');
 
@@ -78,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navItems = document.querySelectorAll('.nav-links a');
 
   function highlightNav() {
-    const scrollY = window.scrollY + 120;
+    const scrollY = window.scrollY + 140;
     sections.forEach(section => {
       const top    = section.offsetTop;
       const height = section.offsetHeight;
@@ -91,13 +84,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------- Navbar shrink on scroll ---------- */
+  /* ---------- Navbar scroll effects ---------- */
   const navbar = document.getElementById('navbar');
   function handleNavbar() {
     if (window.scrollY > 60) {
-      navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,.08)';
+      navbar.classList.add('scrolled');
     } else {
-      navbar.style.boxShadow = 'none';
+      navbar.classList.remove('scrolled');
     }
   }
 
@@ -111,20 +104,11 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.12 });
 
   reveals.forEach(el => revealObserver.observe(el));
 
-  /* ---------- Parallax Hero ---------- */
-  const hero = document.getElementById('hero');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY < window.innerHeight) {
-      const scrollPos = window.scrollY;
-      hero.style.setProperty('--scroll-y', `${scrollPos * 0.4}px`);
-    }
-  });
-
-  /* ---------- Scroll listener for parallax & nav ---------- */
+  /* ---------- Scroll listener ---------- */
   window.addEventListener('scroll', () => {
     highlightNav();
     handleNavbar();
@@ -133,6 +117,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initial calls
   highlightNav();
   handleNavbar();
+
+  /* ---------- Smooth scroll for anchor links ---------- */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
 
   /* ---------- EmailJS Contact Form ---------- */
   const form = document.getElementById('contactForm');
@@ -146,16 +143,14 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>&nbsp; Sending...';
     btn.disabled = true;
 
-    // Use your own Service ID and Template ID from EmailJS
     const serviceID = 'service_9hr72ji';
     const templateID = 'template_ggcp0ma';
     const publicKey = 'ITZgOxtBfrQ-w_cb9';
 
-    // Construct the template parameters exactly matching your EmailJS Template
     const templateParams = {
       name: document.getElementById('name').value,
       email: document.getElementById('email').value,
-      title: "New Message from Portfolio", // Subject field was missing in HTML
+      title: "New Message from Portfolio",
       message: document.getElementById('message').value
     };
 
@@ -163,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(() => {
         alert("Message sent successfully!");
         btn.innerHTML = '<i class="fa-solid fa-check"></i>&nbsp; Message Sent!';
-        btn.style.background = '#2ecc71';
+        btn.style.background = '#28c841';
         btn.style.color = '#fff';
         form.reset();
         
@@ -187,41 +182,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
       });
   });
-
-  /* ---------- Smooth counter animation ---------- */
-  const statNumbers = document.querySelectorAll('.stat-box .number');
-  let statsCounted = false;
-
-  function animateCounters() {
-    if (statsCounted) return;
-    const statsSection = document.querySelector('.about-stats');
-    if (!statsSection) return;
-    const sTop = statsSection.getBoundingClientRect().top;
-    if (sTop < window.innerHeight * 0.9) {
-      statsCounted = true;
-      statNumbers.forEach(num => {
-        const text = num.textContent;
-        const isFloat = text.includes('.');
-        const hasSuffix = text.match(/[+%]/);
-        const suffix = hasSuffix ? hasSuffix[0] : '';
-        const target = parseFloat(text);
-        if (isNaN(target)) return;
-
-        let current = 0;
-        const increment = target / 40;
-        const timer = setInterval(() => {
-          current += increment;
-          if (current >= target) {
-            current = target;
-            clearInterval(timer);
-          }
-          num.textContent = (isFloat ? current.toFixed(1) : Math.round(current)) + suffix;
-        }, 35);
-      });
-    }
-  }
-
-  window.addEventListener('scroll', animateCounters);
-  animateCounters();
 
 });

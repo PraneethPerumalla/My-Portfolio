@@ -12,28 +12,28 @@
 </head>
 
 <body>
+
   <!-- ============= CUSTOM CURSOR ============= -->
-  <div class="custom-cursor" id="customCursor"></div>
-  <div class="custom-cursor-follower" id="customCursorFollower"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
   <!-- ============= NAVIGATION ============= -->
   <nav class="navbar" id="navbar">
     <div class="container">
-      <a href="#hero" class="nav-logo">P<span>.</span>PRANEETH</a>
+      <a href="#hero" class="nav-logo">PRANEETH</a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#certificates">Certificates</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li class="nav-cv"><a href="cv/Praneeth.CV2.pdf" download="Praneeth_Perumalla_CV.pdf" class="btn-cv-nav"><i class="fa-solid fa-download"></i> CV</a></li>
       </ul>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-        <i class="fa-solid fa-sun icon-sun"></i>
-        <i class="fa-solid fa-moon icon-moon"></i>
-      </button>
+      <div class="nav-socials">
+        <a href="https://github.com/PraneethPerumalla" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/perumalla-praneeth-524757294/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:praneethperumalla@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+      <a href="cv/Praneeth.CV2.pdf" download="Praneeth_Perumalla_CV.pdf" class="btn-hire">Download Resume</a>
       <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
@@ -42,147 +42,142 @@
 
   <!-- ============= HERO ============= -->
   <section id="hero">
-    <div class="hero-pastel-bg">
-      <div class="blob blob-1"></div>
-      <div class="blob blob-2"></div>
-      <div class="blob blob-3"></div>
-      <div class="blob blob-4"></div>
-    </div>
     <div class="container">
-      <div class="hero-content reveal reveal-up">
-        <p class="hero-eyebrow"><span class="line"></span> Personal Portfolio</p>
-        <h1 class="hero-title">PRANEETH<span class="accent-dot"></span></h1>
-        <p class="hero-subtitle">B.Tech Computer Science &amp; Engineering student passionate about development, design,
-          and problem-solving.</p>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          AVAILABLE FOR OPPORTUNITIES
+        </div>
+        <h1 class="hero-title">
+          CLOUD ENGINEER<br />
+          & DEVOPS <span class="highlight">ENTHUSIAST</span>
+        </h1>
+        <p class="hero-subtitle">
+          Hi, I'm Praneeth Perumalla. I architect scalable cloud solutions and
+          robust infrastructure with a focus on automation and performance.
+          A passionate cloud engineer with expertise in AWS and modern DevOps practices.
+        </p>
         <div class="hero-cta-row">
-          <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-eye"></i> View Work</a>
-          <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> Get in Touch</a>
+          <a href="#projects" class="btn btn-accent">View Work <i class="fa-solid fa-arrow-up-right"></i></a>
+          <a href="cv/Praneeth.CV2.pdf" download="Praneeth_Perumalla_CV.pdf" class="btn btn-primary">Resume <i class="fa-solid fa-download"></i></a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
         </div>
       </div>
     </div>
     <div class="hero-scroll-indicator">
-      <span>Scroll</span>
       <i class="fa-solid fa-chevron-down"></i>
     </div>
   </section>
 
   <!-- ============= ABOUT ============= -->
   <section id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-image-wrap reveal reveal-left">
-          <img src="images/profile.png" alt="Praneeth Perumalla" />
-          <div class="about-image-accent"></div>
+    <div class="container" style="position:relative;">
+      <div class="about-bg-text">ABOUT</div>
+      <div class="about-header">
+        <div class="about-heading reveal reveal-slide-left">
+          <span class="section-label">WHO I AM</span>
+          <h2 class="section-title">I BUILD THINGS<br>THAT <span class="highlight">MATTER</span></h2>
         </div>
-        <div class="about-text reveal reveal-right" style="--delay: 200ms">
-          <span class="section-label reveal reveal-fade"><span class="dot"></span> About Me</span>
-          <h2 class="section-title reveal reveal-up" style="--delay: 100ms">Perumalla Praneeth</h2>
-          <p class="reveal reveal-up" style="--delay: 200ms"><span class="highlight">Computer Science student</span> at Lovely Professional University, passionate about
-            building clean, functional, and visually engaging digital experiences. I love turning complex problems into
-            simple, elegant solutions.</p>
-          <p class="reveal reveal-up" style="--delay: 300ms">With a strong foundation in C, C++, HTML, CSS, and cloud technologies like Docker &amp; AWS, I'm always
-            eager to learn and adapt. My projects span from algorithm visualization platforms to UI/UX design for
-            real-world applications.</p>
-          <div class="about-stats reveal reveal-up" style="--delay: 400ms">
-            <div class="stat-box reveal reveal-scale-up" style="--delay: 500ms">
-              <div class="number">4+</div>
-              <div class="label">Projects</div>
-            </div>
-            <div class="stat-box reveal reveal-scale-up" style="--delay: 600ms">
-              <div class="number">3+</div>
-              <div class="label">Certifications</div>
-            </div>
-            <div class="stat-box reveal reveal-scale-up" style="--delay: 700ms">
-              <div class="number">6.9</div>
-              <div class="label">CGPA</div>
-            </div>
+        <div class="about-image reveal reveal-zoom" style="--delay: 100ms">
+          <img src="images/profile.png" alt="Praneeth Perumalla" />
+        </div>
+        <div class="about-description reveal reveal-blur" style="--delay: 200ms">
+          <p>I'm a Computer Science student who doesn't just write code — I engineer experiences. From algorithm visualization platforms to cloud-based applications, I obsess over the details that turn good products into great ones.</p>
+          <p>Every project I take on gets the same treatment: deep understanding of the problem, thoughtful architecture, and relentless refinement until it feels right.</p>
+          <div class="about-signature">
+            <div class="line"></div>
+            <span>PERUMALLA PRANEETH</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ============= EDUCATION ============= -->
-  <section id="education">
-    <div class="container">
-      <span class="section-label reveal"><span class="dot"></span> Academic Background</span>
-      <h2 class="section-title reveal">Education</h2>
-      <div class="experience-timeline">
-        <div class="exp-item reveal reveal-up" style="--delay: 100ms">
-          <div class="exp-dot"></div>
-          <p class="exp-date">Aug 2023 — Present</p>
-          <h3>B.Tech — Computer Science &amp; Engineering</h3>
-          <p class="exp-org">Lovely Professional University, Phagwara, Punjab</p>
-          <p>Currently pursuing bachelor's degree with a CGPA of 6.9. Active participant in hackathons and technical
-            events.</p>
+      <!-- Value Cards -->
+      <div class="values-grid stagger-children">
+        <div class="value-card reveal reveal-scale-up">
+          <div class="card-number">01</div>
+          <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Craft</h3>
+          <p>Every line of code is intentional. I build systems that are clean, modular, and maintainable.</p>
         </div>
-        <div class="exp-item reveal reveal-up" style="--delay: 200ms">
-          <div class="exp-dot"></div>
-          <p class="exp-date">Mar 2023</p>
-          <h3>Intermediate — CGPA 8.6</h3>
-          <p class="exp-org">Aditya Junior College, Palakollu, Andhra Pradesh</p>
-          <p>Completed higher secondary education with distinction.</p>
+        <div class="value-card reveal reveal-scale-up">
+          <div class="card-number">02</div>
+          <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Speed</h3>
+          <p>Performance isn't optional. Optimized code, efficient algorithms, and fast load times are my priority.</p>
         </div>
-        <div class="exp-item reveal reveal-up" style="--delay: 300ms">
-          <div class="exp-dot"></div>
-          <p class="exp-date">Mar 2021</p>
-          <h3>Matriculation — CGPA 9.7</h3>
-          <p class="exp-org">Narayana School, Palakollu, Andhra Pradesh</p>
-          <p>Graduated with outstanding academic performance.</p>
+        <div class="value-card reveal reveal-scale-up">
+          <div class="card-number">03</div>
+          <div class="card-icon"><i class="fa-solid fa-layer-group"></i></div>
+          <h3>Scale</h3>
+          <p>From Docker containers to AWS cloud — built to handle real-world workloads and grow with demand.</p>
+        </div>
+        <div class="value-card reveal reveal-scale-up">
+          <div class="card-number">04</div>
+          <div class="card-icon"><i class="fa-solid fa-pen-nib"></i></div>
+          <h3>Design</h3>
+          <p>Pixel-perfect interfaces that feel alive. Typography, spacing, and motion — all considered.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============= SKILLS / CONCEPT ============= -->
+  <!-- ============= SKILLS ============= -->
   <section id="skills">
     <div class="container">
-      <div class="skills-header reveal reveal-up">
-        <span class="section-label reveal reveal-fade"><span class="dot"></span> Concept</span>
-        <h2 class="section-title reveal reveal-up" style="--delay: 100ms">Skills &amp; Expertise</h2>
-        <p class="reveal reveal-up" style="--delay: 200ms">A blend of technical prowess and soft skills honed through academic projects, training programs, and
-          hackathons.</p>
+      <div class="skills-intro reveal reveal-blur">
+        <span class="section-label">WHAT I WORK WITH</span>
+        <h2 class="section-title">SKILLS & <span class="highlight" style="color:#111;">TOOLS</span></h2>
       </div>
-      <div class="skills-grid">
-        <div class="skill-card reveal reveal-zoom" style="--delay: 100ms">
-          <div class="icon"><i class="fa-solid fa-code"></i></div>
-          <h3>Programming</h3>
-          <p>Proficient in core programming languages with strong algorithm and data structure fundamentals.</p>
-          <div class="skill-tags">
-            <span class="skill-tag">C</span>
-            <span class="skill-tag">C++</span>
-            <span class="skill-tag">DSA</span>
-            <span class="skill-tag">Algorithm Design</span>
+
+      <div class="skills-categories">
+        <!-- Frontend -->
+        <div class="skill-category-card dark-card reveal reveal-flip" style="--delay: 100ms">
+          <div class="cat-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Frontend Development</h3>
+          <p>Building responsive, interactive interfaces with modern frameworks and pixel-perfect attention.</p>
+          <div class="skill-pills">
+            <span class="skill-pill"><span class="pill-icon">●</span> HTML5</span>
+            <span class="skill-pill"><span class="pill-icon">●</span> CSS3</span>
+            <span class="skill-pill"><span class="pill-icon">●</span> JavaScript</span>
+            <span class="skill-pill"><span class="pill-icon">●</span> Figma</span>
           </div>
         </div>
-        <div class="skill-card reveal reveal-zoom" style="--delay: 200ms">
-          <div class="icon"><i class="fa-solid fa-palette"></i></div>
-          <h3>Web &amp; Design</h3>
-          <p>Building responsive, accessible web interfaces and crafting intuitive UI/UX experiences.</p>
-          <div class="skill-tags">
-            <span class="skill-tag">HTML</span>
-            <span class="skill-tag">CSS</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">Figma</span>
+
+        <!-- DevOps & Cloud -->
+        <div class="skill-category-card reveal reveal-flip" style="--delay: 200ms">
+          <div class="cat-icon"><i class="fa-solid fa-cloud"></i></div>
+          <h3>DevOps & Cloud</h3>
+          <div class="skill-pills">
+            <span class="skill-pill"><span class="pill-icon">●</span> Docker</span>
+            <span class="skill-pill"><span class="pill-icon">●</span> AWS</span>
+            <span class="skill-pill"><span class="pill-icon">●</span> Git</span>
           </div>
         </div>
-        <div class="skill-card reveal reveal-zoom" style="--delay: 300ms">
-          <div class="icon"><i class="fa-solid fa-cloud"></i></div>
-          <h3>DevOps &amp; Cloud</h3>
-          <p>Hands-on experience with containerization and cloud infrastructure platforms.</p>
-          <div class="skill-tags">
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">AWS</span>
+
+        <!-- Row 2 -->
+        <div class="row-2">
+          <!-- Programming -->
+          <div class="skill-category-card reveal reveal-zoom" style="--delay: 300ms">
+            <div class="cat-icon"><i class="fa-solid fa-terminal"></i></div>
+            <h3>Programming</h3>
+            <div class="skill-pills">
+              <span class="skill-pill"><span class="pill-icon">●</span> C</span>
+              <span class="skill-pill"><span class="pill-icon">●</span> C++</span>
+              <span class="skill-pill"><span class="pill-icon">●</span> DSA</span>
+            </div>
           </div>
-        </div>
-        <div class="skill-card reveal reveal-zoom" style="--delay: 400ms">
-          <div class="icon"><i class="fa-solid fa-lightbulb"></i></div>
-          <h3>Soft Skills</h3>
-          <p>Adaptable team player with strong analytical thinking and rapid learning ability.</p>
-          <div class="skill-tags">
-            <span class="skill-tag">Problem-Solving</span>
-            <span class="skill-tag">Adaptability</span>
-            <span class="skill-tag">Quick Learner</span>
+
+          <!-- Tools & Workflow -->
+          <div class="skill-category-card accent-card reveal reveal-zoom" style="--delay: 400ms">
+            <div class="cat-icon"><i class="fa-solid fa-bolt"></i></div>
+            <h3>Tools & Workflow</h3>
+            <p>Efficient workflows with industry-standard tools for version control, deployment, and collaboration.</p>
+            <div class="skill-pills">
+              <span class="skill-pill"><span class="pill-icon">●</span> Git</span>
+              <span class="skill-pill"><span class="pill-icon">●</span> VS Code</span>
+              <span class="skill-pill"><span class="pill-icon">●</span> Figma</span>
+              <span class="skill-pill"><span class="pill-icon">●</span> Linux</span>
+            </div>
           </div>
         </div>
       </div>
@@ -192,159 +187,121 @@
   <!-- ============= PROJECTS ============= -->
   <section id="projects">
     <div class="container">
-      <span class="section-label reveal"><span class="dot"></span> The Work</span>
-      <h2 class="section-title reveal">Featured Projects</h2>
+      <div class="projects-header">
+        <div class="reveal reveal-slide-left">
+          <span class="section-label">SELECTED WORK</span>
+          <h2 class="section-title">FEATURED <span class="highlight">PROJECTS</span></h2>
+        </div>
+        <p class="reveal reveal-blur" style="--delay: 200ms">A collection of projects that showcase my expertise across full-stack development, algorithm design, and UI/UX.</p>
+      </div>
 
-      <div class="projects-scroll-wrapper reveal">
-        <div class="projects-grid">
-          <!-- Project 1 -->
-          <div class="project-card reveal reveal-up" style="--delay: 100ms">
-            <div class="project-image">
-              <a href="https://praneethperumalla.github.io/CPU-Scheduling-Algorithm/" target="_blank">
-                <img src="images/project-cpu.png" alt="CPU Scheduling Visualization" />
-                <div class="overlay">
-                  <span style="color:#fff;font-family:var(--ff-heading);font-weight:600;">Live Demo →</span>
-                </div>
-              </a>
-            </div>
-            <div class="project-body">
-              <p class="project-date">Featured Project</p>
-              <h3>CPU Scheduling Algorithm</h3>
-              <p>An interactive web platform to simulate CPU scheduling algorithms — FCFS, SJF, Round Robin, and
-                Priority Scheduling — with real-time comparisons.</p>
-              <div class="project-tech">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Algorithm Design</span>
-              </div>
-              <div class="project-links" style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap;">
-                <a href="https://github.com/PraneethPerumalla/CPU-Scheduling-Algorithm.git" target="_blank"
-                  class="btn btn-outline" style="padding: 10px 20px; font-size: var(--fs-xs); margin-bottom: 0;"><i
-                    class="fa-brands fa-github"></i> GitHub</a>
-                <a href="https://praneethperumalla.github.io/CPU-Scheduling-Algorithm/" target="_blank"
-                  class="btn btn-primary" style="padding: 10px 20px; font-size: var(--fs-xs); margin-bottom: 0;"><i
-                    class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-              </div>
+      <!-- Project 1: CPU Scheduling -->
+      <div class="project-featured reveal" style="--delay: 100ms">
+        <div class="project-number">01</div>
+        <div class="browser-mockup">
+          <div class="browser-bar">
+            <div class="browser-dots"><span></span><span></span><span></span></div>
+            <div class="browser-url">
+              <span class="dot-green"></span> praneethperumalla.github.io
             </div>
           </div>
-          <!-- Project 2 -->
-          <div class="project-card reveal reveal-up" style="--delay: 200ms">
-            <div class="project-image">
-              <a href="https://praneethperumalla.github.io/CloudNotes/" target="_blank">
-                <img src="images/project-attendance.png" alt="Cloud Notes" />
-                <div class="overlay">
-                  <span style="color:#fff;font-family:var(--ff-heading);font-weight:600;">Live Demo →</span>
-                </div>
-              </a>
-            </div>
-            <div class="project-body">
-              <p class="project-date">Featured Project</p>
-              <h3>Cloud Notes</h3>
-              <p>A cloud-based note-taking application allowing users to securely manage, organize, and store their
-                notes with seamless cloud integration.</p>
-              <div class="project-tech">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Cloud Storage</span>
-              </div>
-              <div class="project-links" style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap;">
-                <a href="https://github.com/PraneethPerumalla/CloudNotes.git" target="_blank" class="btn btn-outline"
-                  style="padding: 10px 20px; font-size: var(--fs-xs); margin-bottom: 0;"><i
-                    class="fa-brands fa-github"></i> GitHub</a>
-                <a href="https://praneethperumalla.github.io/CloudNotes/" target="_blank" class="btn btn-primary"
-                  style="padding: 10px 20px; font-size: var(--fs-xs); margin-bottom: 0;"><i
-                    class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-              </div>
-            </div>
+          <div class="browser-body">
+            <a href="https://praneethperumalla.github.io/CPU-Scheduling-Algorithm/" target="_blank">
+              <img src="images/project-cpu.png" alt="CPU Scheduling Visualization" />
+            </a>
           </div>
-          <!-- Project 3 -->
-          <div class="project-card reveal reveal-up" style="--delay: 300ms">
-            <div class="project-image">
-              <img src="images/project-food.png" alt="Food Delivery UI Design" />
-              <div class="overlay">
-                <span style="color:#fff;font-family:var(--ff-heading);font-weight:600;">View Project →</span>
-              </div>
-            </div>
-            <div class="project-body">
-              <p class="project-date">September 2025</p>
-              <h3>Online Food Delivery Website Design</h3>
-              <p>Designed a user-friendly UI/UX for an online food delivery platform in Figma, featuring smooth
-                navigation, intuitive ordering flow, and refined usability.</p>
-              <div class="project-tech">
-                <span>Figma</span>
-                <span>UI/UX</span>
-                <span>Prototyping</span>
-                <span>Wireframing</span>
-              </div>
-              <div class="project-links" style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap;">
-                <a href="https://github.com/PraneethPerumalla/Figma---Online-Food-Delivery-App" target="_blank"
-                  class="btn btn-outline" style="padding: 10px 20px; font-size: var(--fs-xs); margin-bottom: 0;"><i
-                    class="fa-brands fa-github"></i> GitHub</a>
-                <a href="https://www.figma.com/proto/wRxcfJ9OsJw8wdy2C22vFd/food-application--Copy---Copy-?node-id=828-1022&starting-point-node-id=668%3A1744&t=NKxa7WUR20IZBOKW-1&show-proto-sidebar=1" target="_blank"
-                  class="btn btn-primary" style="padding: 10px 20px; font-size: var(--fs-xs); margin-bottom: 0;"><i
-                    class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
-              </div>
-            </div>
+        </div>
+        <div class="project-info">
+          <div class="project-meta">
+            <span class="meta-num">01</span>
+            <span class="meta-line"></span>
+            <span class="meta-badge"><i class="fa-solid fa-star"></i> FEATURED</span>
+          </div>
+          <h3>CPU Scheduling Algorithm</h3>
+          <p>An interactive web platform to simulate CPU scheduling algorithms — FCFS, SJF, Round Robin, and Priority Scheduling — with real-time Gantt chart comparisons and performance metrics.</p>
+          <div class="project-tech">
+            <span><span class="tech-dot"></span> HTML</span>
+            <span><span class="tech-dot"></span> CSS</span>
+            <span><span class="tech-dot"></span> JavaScript</span>
+            <span><span class="tech-dot"></span> Algorithm Design</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://praneethperumalla.github.io/CPU-Scheduling-Algorithm/" target="_blank" class="btn-live">Live Site <i class="fa-solid fa-arrow-up-right"></i></a>
+            <a href="https://github.com/PraneethPerumalla/CPU-Scheduling-Algorithm.git" target="_blank" class="btn-source"><i class="fa-brands fa-github"></i> Source</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-
-  <!-- ============= CERTIFICATES ============= -->
-  <section id="certificates">
-    <div class="container">
-      <span class="section-label reveal reveal-fade"><span class="dot"></span> Achievements</span>
-      <h2 class="section-title reveal reveal-up" style="--delay: 100ms">Certifications</h2>
-
-      <div class="projects-grid" style="flex-wrap: wrap; justify-content: center; overflow-x: visible;">
-        <!-- Certificate 1: Google Networking -->
-        <div class="project-card reveal reveal-up" style="--delay: 100ms; flex: 0 0 clamp(280px, 45vw, 380px);">
-          <div class="project-body" style="height: 100%; display: flex; flex-direction: column;">
-            <div class="icon" style="font-size: 2rem; color: var(--clr-accent); margin-bottom: 20px;"><i
-                class="fa-solid fa-certificate"></i></div>
-            <p class="project-date">Sep 2024</p>
-            <h3>The Bits and Bytes of Computer Networking (Google)</h3>
-            <p>Non-credit course authorized by Google, covering foundational technology concepts on Coursera.</p>
-            <div class="project-tech" style="margin-top: auto; padding-top: 20px;">
-              <span>Coursera</span>
-              <span>Google</span>
+      <!-- Project 2: Cloud Notes -->
+      <div class="project-featured reverse reveal reveal-scale" style="--delay: 100ms">
+        <div class="project-number">02</div>
+        <div class="browser-mockup">
+          <div class="browser-bar">
+            <div class="browser-dots"><span></span><span></span><span></span></div>
+            <div class="browser-url">
+              <span class="dot-green"></span> praneethperumalla.github.io
             </div>
-            <a href="https://drive.google.com/file/d/1Ngdq7825LTV4AnXTKkUAJGKAXsHLAfRL/view?usp=drive_link" target="_blank" class="btn btn-outline" style="margin-top: 15px; padding: 8px 16px; font-size: 0.8rem; width: fit-content;">View Certificate</a>
+          </div>
+          <div class="browser-body">
+            <a href="https://praneethperumalla.github.io/CloudNotes/" target="_blank">
+              <img src="images/project-attendance.png" alt="Cloud Notes" />
+            </a>
           </div>
         </div>
-        <!-- Certificate 2: Ethical Hacking -->
-        <div class="project-card reveal reveal-up" style="--delay: 200ms; flex: 0 0 clamp(280px, 45vw, 380px);">
-          <div class="project-body" style="height: 100%; display: flex; flex-direction: column;">
-            <div class="icon" style="font-size: 2rem; color: var(--clr-accent); margin-bottom: 20px;"><i
-                class="fa-solid fa-shield-halved"></i></div>
-            <p class="project-date">Mar 2024</p>
-            <h3>Ethical Hacking Certification</h3>
-            <p>30+ Hours Live Training — Code Sprint. Completed comprehensive live training in ethical hacking and
-              cybersecurity fundamentals.</p>
-            <div class="project-tech" style="margin-top: auto; padding-top: 20px;">
-              <span>Cybersecurity</span>
-              <span>Ethical Hacking</span>
-            </div>
-            <a href="https://drive.google.com/file/d/1DXxO27yWBWcFnp_zmk-LoRsGkd70z0t8/view?usp=drive_link" target="_blank" class="btn btn-outline" style="margin-top: 15px; padding: 8px 16px; font-size: 0.8rem; width: fit-content;">View Certificate</a>
+        <div class="project-info">
+          <div class="project-meta">
+            <span class="meta-num">02</span>
+            <span class="meta-line"></span>
+            <span class="meta-badge"><i class="fa-solid fa-star"></i> FEATURED</span>
+          </div>
+          <h3>Cloud Notes</h3>
+          <p>A cloud-based note-taking application allowing users to securely manage, organize, and store their notes with seamless cloud integration.</p>
+          <div class="project-tech">
+            <span><span class="tech-dot"></span> HTML</span>
+            <span><span class="tech-dot"></span> CSS</span>
+            <span><span class="tech-dot"></span> JavaScript</span>
+            <span><span class="tech-dot"></span> Cloud Storage</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://praneethperumalla.github.io/CloudNotes/" target="_blank" class="btn-live">Live Site <i class="fa-solid fa-arrow-up-right"></i></a>
+            <a href="https://github.com/PraneethPerumalla/CloudNotes.git" target="_blank" class="btn-source"><i class="fa-brands fa-github"></i> Source</a>
           </div>
         </div>
-        <!-- Certificate 3: Centre for Professional Enhancement -->
-        <div class="project-card reveal reveal-up" style="--delay: 300ms; flex: 0 0 clamp(280px, 45vw, 380px);">
-          <div class="project-body" style="height: 100%; display: flex; flex-direction: column;">
-            <div class="icon" style="font-size: 2rem; color: var(--clr-accent); margin-bottom: 20px;"><i
-                class="fa-solid fa-graduation-cap"></i></div>
-            <p class="project-date">July 2025</p>
-            <h3>Centre for Professional Enhancement</h3>
-            <p>Think Design Prototype - Summer Training on Design Thinking & Figma. Awarded Grade O (Outstanding) for excellence in skill development.</p>
-            <div class="project-tech" style="margin-top: auto; padding-top: 20px;">
-              <span>Design Thinking</span>
-              <span>Figma</span>
+      </div>
+
+      <!-- Project 3: Food Delivery -->
+      <div class="project-featured reveal reveal-scale" style="--delay: 100ms">
+        <div class="project-number">03</div>
+        <div class="browser-mockup">
+          <div class="browser-bar">
+            <div class="browser-dots"><span></span><span></span><span></span></div>
+            <div class="browser-url">
+              <span class="dot-green"></span> figma.com
             </div>
-            <a href="https://drive.google.com/file/d/1ZA6L28_hWH6wvQLLQ0hnAGhSH3uuzOWa/view" target="_blank" class="btn btn-outline" style="margin-top: 15px; padding: 8px 16px; font-size: 0.8rem; width: fit-content;">View Certificate</a>
+          </div>
+          <div class="browser-body">
+            <a href="https://www.figma.com/proto/wRxcfJ9OsJw8wdy2C22vFd/food-application--Copy---Copy-?node-id=828-1022&starting-point-node-id=668%3A1744&t=NKxa7WUR20IZBOKW-1&show-proto-sidebar=1" target="_blank">
+              <img src="images/project-food.png" alt="Food Delivery UI Design" />
+            </a>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-meta">
+            <span class="meta-num">03</span>
+            <span class="meta-line"></span>
+            <span class="meta-badge"><i class="fa-solid fa-star"></i> FEATURED</span>
+          </div>
+          <h3>Online Food Delivery</h3>
+          <p>Designed a user-friendly UI/UX for an online food delivery platform in Figma, featuring smooth navigation, intuitive ordering flow, and refined usability.</p>
+          <div class="project-tech">
+            <span><span class="tech-dot"></span> Figma</span>
+            <span><span class="tech-dot"></span> UI/UX</span>
+            <span><span class="tech-dot"></span> Prototyping</span>
+            <span><span class="tech-dot"></span> Wireframing</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://www.figma.com/proto/wRxcfJ9OsJw8wdy2C22vFd/food-application--Copy---Copy-?node-id=828-1022&starting-point-node-id=668%3A1744&t=NKxa7WUR20IZBOKW-1&show-proto-sidebar=1" target="_blank" class="btn-live">Live Site <i class="fa-solid fa-arrow-up-right"></i></a>
+            <a href="https://github.com/PraneethPerumalla/Figma---Online-Food-Delivery-App" target="_blank" class="btn-source"><i class="fa-brands fa-github"></i> Source</a>
           </div>
         </div>
       </div>
@@ -354,18 +311,19 @@
   <!-- ============= EXPERIENCE ============= -->
   <section id="experience">
     <div class="container">
-      <span class="section-label reveal reveal-fade"><span class="dot"></span> Career Path</span>
-      <h2 class="section-title reveal reveal-up" style="--delay: 100ms">Experience</h2>
+      <div class="experience-header reveal reveal-slide-left">
+        <span class="section-label">CAREER PATH</span>
+        <h2 class="section-title">EXPERIENCE</h2>
+      </div>
       <div class="experience-timeline">
-        <div class="exp-item reveal reveal-up" style="--delay: 100ms">
+        <div class="exp-item reveal reveal-left" style="--delay: 100ms">
           <div class="exp-dot"></div>
           <p class="exp-date">Jun 2025</p>
           <h3>Think Design Prototype — Summer Training</h3>
-          <p class="exp-org">Design Thinking &amp; Figma Program</p>
-          <p>Intensive training on problem-solving, algorithmic optimization, advanced data structures, and competitive
-            programming performance improvement.</p>
+          <p class="exp-org">Design Thinking & Figma Program</p>
+          <p>Intensive training on problem-solving, design thinking methodologies, prototyping in Figma, and UI/UX best practices for real-world applications.</p>
         </div>
-        <div class="exp-item reveal reveal-up" style="--delay: 200ms">
+        <div class="exp-item reveal reveal-left" style="--delay: 200ms">
           <div class="exp-dot"></div>
           <p class="exp-date">Mar 2024</p>
           <h3>LPU Innovation Hackathon</h3>
@@ -376,66 +334,138 @@
     </div>
   </section>
 
+  <!-- ============= EDUCATION ============= -->
+  <section id="education">
+    <div class="container">
+      <div class="experience-header reveal reveal-slide-left">
+        <span class="section-label">ACADEMIC BACKGROUND</span>
+        <h2 class="section-title">EDUCATION</h2>
+      </div>
+      <div class="experience-timeline">
+        <div class="exp-item reveal reveal-left" style="--delay: 100ms">
+          <div class="exp-dot"></div>
+          <p class="exp-date">Aug 2023 — Present</p>
+          <h3>B.Tech — Computer Science & Engineering</h3>
+          <p class="exp-org">Lovely Professional University, Phagwara, Punjab</p>
+          <p>Currently pursuing bachelor's degree with a CGPA of 6.9. Active participant in hackathons and technical events.</p>
+        </div>
+        <div class="exp-item reveal reveal-left" style="--delay: 200ms">
+          <div class="exp-dot"></div>
+          <p class="exp-date">Mar 2023</p>
+          <h3>Intermediate — CGPA 8.6</h3>
+          <p class="exp-org">Aditya Junior College, Palakollu, Andhra Pradesh</p>
+          <p>Completed higher secondary education with distinction.</p>
+        </div>
+        <div class="exp-item reveal reveal-left" style="--delay: 300ms">
+          <div class="exp-dot"></div>
+          <p class="exp-date">Mar 2021</p>
+          <h3>Matriculation — CGPA 9.7</h3>
+          <p class="exp-org">Narayana School, Palakollu, Andhra Pradesh</p>
+          <p>Graduated with outstanding academic performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-
+  <!-- ============= CERTIFICATES ============= -->
+  <section id="certificates">
+    <div class="container">
+      <div class="experience-header reveal">
+        <span class="section-label">ACHIEVEMENTS</span>
+        <h2 class="section-title">CERTIFICATIONS</h2>
+      </div>
+      <div class="certificates-grid">
+        <div class="cert-card reveal reveal-zoom" style="--delay: 100ms">
+          <i class="fa-solid fa-certificate cert-icon"></i>
+          <span class="cert-date">Sep 2024</span>
+          <h3>The Bits and Bytes of Computer Networking (Google)</h3>
+          <p>Non-credit course authorized by Google, covering foundational technology concepts on Coursera.</p>
+          <div class="cert-tags">
+            <span>Coursera</span>
+            <span>Google</span>
+          </div>
+          <a href="https://drive.google.com/file/d/1Ngdq7825LTV4AnXTKkUAJGKAXsHLAfRL/view?usp=drive_link" target="_blank" class="btn-cert">View Certificate <i class="fa-solid fa-arrow-up-right"></i></a>
+        </div>
+        <div class="cert-card reveal reveal-zoom" style="--delay: 200ms">
+          <i class="fa-solid fa-shield-halved cert-icon"></i>
+          <span class="cert-date">Mar 2024</span>
+          <h3>Ethical Hacking Certification</h3>
+          <p>30+ Hours Live Training — Code Sprint. Completed comprehensive live training in ethical hacking and cybersecurity fundamentals.</p>
+          <div class="cert-tags">
+            <span>Cybersecurity</span>
+            <span>Ethical Hacking</span>
+          </div>
+          <a href="https://drive.google.com/file/d/1DXxO27yWBWcFnp_zmk-LoRsGkd70z0t8/view?usp=drive_link" target="_blank" class="btn-cert">View Certificate <i class="fa-solid fa-arrow-up-right"></i></a>
+        </div>
+        <div class="cert-card reveal reveal-zoom" style="--delay: 300ms">
+          <i class="fa-solid fa-graduation-cap cert-icon"></i>
+          <span class="cert-date">July 2025</span>
+          <h3>Centre for Professional Enhancement</h3>
+          <p>Think Design Prototype - Summer Training on Design Thinking & Figma. Awarded Grade O (Outstanding) for excellence.</p>
+          <div class="cert-tags">
+            <span>Design Thinking</span>
+            <span>Figma</span>
+          </div>
+          <a href="https://drive.google.com/file/d/1ZA6L28_hWH6wvQLLQ0hnAGhSH3uuzOWa/view" target="_blank" class="btn-cert">View Certificate <i class="fa-solid fa-arrow-up-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ============= CONTACT ============= -->
   <section id="contact">
     <div class="container">
-      <div class="contact-grid reveal reveal-up">
-        <div class="contact-info reveal reveal-left">
-          <span class="section-label" style="color:rgba(255,255,255,.4);"><span class="dot"></span> Contact</span>
-          <h2 class="section-title reveal reveal-up" style="--delay: 100ms">Let's Work<br />Together<span
-              class="accent">.</span></h2>
-          <p class="reveal reveal-up" style="--delay: 200ms">Have a project in mind or just want to say hello? Feel free
-            to reach out — I'd love to hear from you!</p>
-          <div class="contact-links">
-            <div class="contact-link-item reveal reveal-up" style="--delay: 300ms">
-              <div class="cl-icon"><i class="fa-solid fa-envelope"></i></div>
-              <div class="cl-text">
-                <div class="cl-label">Email</div>
-                <div class="cl-value"><a href="mailto:praneethperumalla@gmail.com">praneethperumalla@gmail.com</a></div>
-              </div>
+      <div class="contact-header reveal reveal-blur">
+        <span class="section-label">GET IN TOUCH</span>
+        <h2 class="section-title">LET'S BUILD<br><span class="highlight">SOMETHING GREAT</span></h2>
+        <p>I'm always open to new opportunities, collaborations, and interesting projects. Let's connect.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-list reveal reveal-slide-left" style="--delay: 100ms">
+          <div class="contact-link-item">
+            <div class="cl-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="cl-text">
+              <div class="cl-label">Email</div>
+              <div class="cl-value"><a href="mailto:praneethperumalla@gmail.com">praneethperumalla@gmail.com</a></div>
             </div>
-            <div class="contact-link-item reveal reveal-up" style="--delay: 400ms">
-              <div class="cl-icon"><i class="fa-solid fa-phone"></i></div>
-              <div class="cl-text">
-                <div class="cl-label">Phone</div>
-                <div class="cl-value"><a href="tel:+919182420993">+91-9182420993</a></div>
-              </div>
+          </div>
+          <div class="contact-link-item">
+            <div class="cl-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="cl-text">
+              <div class="cl-label">Phone</div>
+              <div class="cl-value"><a href="tel:+919182420993">+91-9182420993</a></div>
             </div>
-            <div class="contact-link-item reveal reveal-up" style="--delay: 500ms">
-              <div class="cl-icon"><i class="fa-brands fa-linkedin-in"></i></div>
-              <div class="cl-text">
-                <div class="cl-label">LinkedIn</div>
-                <div class="cl-value"><a href="https://www.linkedin.com/in/perumalla-praneeth-524757294/"
-                    target="_blank">Perumalla Praneeth</a></div>
-              </div>
+          </div>
+          <div class="contact-link-item">
+            <div class="cl-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="cl-text">
+              <div class="cl-label">LinkedIn</div>
+              <div class="cl-value"><a href="https://www.linkedin.com/in/perumalla-praneeth-524757294/" target="_blank">Perumalla Praneeth</a></div>
             </div>
-            <div class="contact-link-item reveal reveal-up" style="--delay: 600ms">
-              <div class="cl-icon"><i class="fa-brands fa-github"></i></div>
-              <div class="cl-text">
-                <div class="cl-label">GitHub</div>
-                <div class="cl-value"><a href="https://github.com/PraneethPerumalla"
-                    target="_blank">PraneethPerumalla</a></div>
-              </div>
+          </div>
+          <div class="contact-link-item">
+            <div class="cl-icon"><i class="fa-brands fa-github"></i></div>
+            <div class="cl-text">
+              <div class="cl-label">GitHub</div>
+              <div class="cl-value"><a href="https://github.com/PraneethPerumalla" target="_blank">PraneethPerumalla</a></div>
             </div>
           </div>
         </div>
-        <div class="contact-form-wrap reveal reveal-right">
+        <div class="contact-form-wrap reveal reveal-slide-right" style="--delay: 200ms">
           <form class="contact-form" id="contactForm">
-            <div class="form-group reveal reveal-up" style="--delay: 100ms">
+            <div class="form-group">
               <input type="text" id="name" name="name" placeholder="Your Name" required />
             </div>
-            <div class="form-group reveal reveal-up" style="--delay: 200ms">
+            <div class="form-group">
               <input type="email" id="email" name="email" placeholder="Your Email" required />
             </div>
-            <div class="form-group reveal reveal-up" style="--delay: 400ms">
+            <div class="form-group">
               <textarea id="message" name="message" placeholder="Your Message" required></textarea>
             </div>
-            <div class="form-actions reveal reveal-up" style="--delay: 500ms">
+            <div class="form-actions">
               <button class="btn-submit" type="submit"><i class="fa-solid fa-paper-plane"></i>&nbsp; Send Message</button>
-              <a href="cv/Praneeth.CV2.pdf" download="Praneeth_Perumalla_CV.pdf" class="btn btn-outline cv-btn-contact"><i class="fa-solid fa-download"></i> Download CV</a>
+              <a href="cv/Praneeth.CV2.pdf" download="Praneeth_Perumalla_CV.pdf" class="cv-btn-contact"><i class="fa-solid fa-download"></i> Download CV</a>
             </div>
           </form>
         </div>
@@ -448,10 +478,8 @@
     <div class="container">
       <p>&copy; 2025 Praneeth Perumalla. All Rights Reserved.</p>
       <div class="footer-socials">
-        <a href="https://www.linkedin.com/in/perumalla-praneeth-524757294/" target="_blank" aria-label="LinkedIn"><i
-            class="fa-brands fa-linkedin-in"></i></a>
-        <a href="https://github.com/PraneethPerumalla" target="_blank" aria-label="GitHub"><i
-            class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/perumalla-praneeth-524757294/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/PraneethPerumalla" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
         <a href="mailto:praneethperumalla@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
       </div>
     </div>
@@ -461,12 +489,11 @@
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script type="text/javascript">
     (function () {
-      // Initialize with your Public Key
       emailjs.init("ITZgOxtBfrQ-w_cb9");
     })();
   </script>
 
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=3"></script>
 </body>
 
 </html>
